@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-0d1b80a048d4787e.js"></script><script src="/_next/static/chunks/webpack-05b8c18cdbe0b397.js" defer=""></script><script src="/_next/static/chunks/framework-4556c45dd113b893.js" defer=""></script><script src="/_next/static/chunks/main-2043948c1246ba90.js" defer=""></script><script src="/_next/static/chunks/pages/_app-9538641435026bd3.js" defer=""></script><script src="/_next/static/chunks/pages/linux/exam-596c56ec727525ea.js" defer=""></script><script src="/_next/static/VODoK-FwMA4OVQTvI7ur6/_buildManifest.js" defer=""></script><script src="/_next/static/VODoK-FwMA4OVQTvI7ur6/_ssgManifest.js" defer=""></script></head><body><div id="__next"><h1>Программа экзамена</h1>
+<p>В экзаменационном билете будет один вопрос на знание теоретических основ и одно практическое задание.</p>
+<h2>Теоретическая часть</h2>
+<ol>
+<li>
+<p>Абсолютный и относительный путь. Текущий рабочий каталог, домашний каталог, корневой каталог. Экранирование специальных символов. Применение метасимволов <code>*</code>, <code>?</code>, <code>[...]</code> и <code>[!...]</code>.</p>
+</li>
+<li>
+<p>Перемещение по файловой системе. Получение списка файлов. Копирование, перемещение и удаление файлов. Создание файлов и каталогов. Отметки времени файлов. Команды <code>pwd</code>, <code>ls</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>mkdir</code>, <code>rmdir</code>, <code>touch</code>.</p>
+</li>
+<li>
+<p>Система прав доступа к файлам. Изменение прав доступа к файлу (<code>chmod</code>). Биты SUID, SGID и Sticky. Команды <code>chown</code> и <code>chgrp</code>.</p>
+</li>
+<li>
+<p>Типы файлов. Файлы устройств. Файлы межпроцессного обмена данными. Жёсткие и символические ссылки. Создание и удаление ссылок. Команды <code>file</code>, <code>ln</code>, <code>unlink</code>.</p>
+</li>
+<li>
+<p>Управление процессами. Понятия процесса, идентификатора процесса (PID), родительского и дочернего процесса, зомби-процесса, сигнала. Утилиты <code>ps</code>, <code>pstree</code>, <code>top</code>, <code>nice</code>, <code>kill</code>, <code>killall</code>.</p>
+</li>
+<li>
+<p>Управление службами в systemd и журналирование. Команды <code>systemctl</code>, <code>journalctl</code>, <code>dmesg</code>. Каталог <code>/var/log</code>.</p>
+</li>
+<li>
+<p>Использование встроенной документации. Команда <code>whatis</code> и ключи <code>--help</code>, <code>--version</code>. Страницы справочной системы <code>man</code> и <code>info</code>. Документация в <code>/usr/share/doc</code>. Идентификация дистрибутива. Команда <code>uname</code>. Файл <code>/etc/issue</code>.</p>
+</li>
+<li>
+<p>Структура дерева каталогов Linux. Стандарт Filesystem Hierarchy Standart. Назначение каталогов <code>/boot</code>, <code>/bin</code>, <code>/dev</code>, <code>/etc</code>, <code>/home</code>, <code>/lib</code>, <code>/media</code>, <code>/mnt</code>, <code>/opt</code>, <code>/root</code>, <code>/sbin</code>, <code>/tmp</code>, <code>/usr</code>, <code>/var</code>.</p>
+</li>
+<li>
+<p>Внутренние и внешние команды Bash. Команды <code>source</code>, <code>alias</code>, <code>bind</code>. Ввод и вывод данных в Bash. Команды <code>echo</code>, <code>read</code>. Подстановка команд (command substitution).</p>
+</li>
+<li>
+<p>Стандартные потоки ввода, вывода и ошибок. Переадресация стандартного потока вывода. Конвейеры (pipelines). Операторы <code>\&amp;\&amp;</code> и <code>||</code>. Переменные среды. Переменные <code>\$PATH</code>, <code>\$HOME</code>, <code>\$LANG</code>. Команды <code>export</code>, <code>cat</code>, <code>tee</code>.</p>
+</li>
+<li>
+<p>Выполнение команд в фоновом режиме. Команды <code>jobs</code>, <code>fg</code>, <code>bg</code>, <code>at</code>. Оператор <code>\&amp;</code>.</p>
+</li>
+<li>
+<p>Планировщик <code>cron</code> и команда <code>crontab</code>. Примеры записей в crontab-файле.</p>
+</li>
+<li>
+<p>Управление пользователями. Понятие учётной записи и домашнего каталога. Идентификатор пользователя. Учётная запись суперпользователя (root). Файлы <code>/etc/passwd</code>, <code>/etc/group</code> и <code>/etc/shadow</code>. Команды <code>adduser</code>, <code>useradd</code>, <code>usermod</code>, <code>userdel</code>, <code>passwd</code>, <code>id</code>, <code>sudo</code>, <code>su</code>, <code>groups</code>.</p>
+</li>
+<li>
+<p>Подготовка к работе и монтирование дисков. Таблицы разделов в формате MBR (BIOS) и GPT (UEFI). Признак типа раздела и обзор популярных файловых систем. Утилиты <code>fdisk</code>, <code>cfdisk</code>, <code>parted</code>.</p>
+</li>
+<li>
+<p>Создание, монтирование и проверка файловых систем с помощью утилит <code>mkfs</code>, <code>mount</code>, <code>umount</code>, <code>chroot</code>, <code>tune2fs</code> и <code>fsck</code>. Конфигурационныи файл <code>/etc/fstab</code>. Опции монтирования.</p>
+</li>
+<li>
+<p>Управление виртуальной памятью. Утилиты <code>mkswap</code>, <code>swapon</code>, <code>swapoff</code>.</p>
+</li>
+<li>
+<p>Система Logical Volume Management. Утилиты работы с LVM.</p>
+</li>
+<li>
+<p>Система контейнерной виртуализации Docker. Понятия реестра, образа, контейнера и главного процесса. Работа с образами. Работа с контейнерами. Создание контейнеров. Оркестрация контейнеров.</p>
+</li>
+<li>
+<p>Утилиты работы с пакетами в форматах deb. Зависимости пакетов. Менеджеры пакетов. Понятие репозитория. Конфигурационный файл <code>/etc/apt/sources.list</code> и каталог <code>/etc/apt/sources.listd.d</code>. Команды <code>apt</code>, <code>dpkg</code>.</p>
+</li>
+<li>
+<p>Настройка сети в ОС Linux. Команды <code>ifconfig</code>, <code>route</code> и <code>ip</code>. Настройка службы DNS с помощью файла <code>/etc/hosts</code>. Конфигурация сети в дистрибутивах Ubuntu и Debian с помощью файла <code>/etc/network/interfaces</code> и <code>netplan</code>.</p>
+</li>
+<li>
+<p>Поиск файлов. Команды <code>whereis</code>, <code>which</code>, <code>find</code>, <code>locate</code>.</p>
+</li>
+<li>
+<p>Просмотр и редактирование текстовых файлов. Команды <code>less</code>, <code>tail</code>, <code>head</code>, <code>nano</code>, <code>more</code>, <code>vi/vim/nvim</code>.</p>
+</li>
+</ol>
+<h2>Практические умения</h2>
+<p>Для успешного выполнения практического задания студент должен уметь:</p>
+<ol>
+<li>Управление пользователями (создание, модификация и удаление) и группами (создание и удаление группы, управление составом группы).</li>
+<li>Редактирование таблицы разделов, форматирование файловых систем, монтирование файловых систем.</li>
+<li>Работа в командной строке с потоками ввода/вывода и конвейерами, а также использование команд <code>grep</code>, <code>cat</code>, <code>tee</code>, <code>sort</code>, <code>wc</code>, <code>cut</code>.</li>
+<li>Работа с контейнерной виртуализацией на базе Docker (поиск, скачивание и удаление образов, запуск и удаление контейнеров, подключение терминала, каталогов и TCP-портов к контейнеру).</li>
+<li>Установка и настройка веб-сервера Apache с модулем PHP.</li>
+</ol>
+<h2>Литература</h2>
+<ol>
+<li>Граннеман С. Linux. Карманныи справочник. — М.: ООО «И.Д. Вильямс», 2010. — 416 с.</li>
+<li>Кофлер М. Linux. Установка, настроика, администрирование. -- СПб.: Питер, 2014. — 768 с.</li>
+<li>Немет Э., Снаидер Г., Хеин Т. Руководство администратора Linux, 2-е издание. — М.: ООО «И.Д. Вильямс», 2007 — 1072 с.</li>
+<li>Собель М. Linux Администрирование и системное программирование. 2-е изд. — СПб.: Питер, 2011. — 880 с.</li>
+</ol></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/linux/exam","query":{},"buildId":"VODoK-FwMA4OVQTvI7ur6","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
