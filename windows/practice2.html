@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-0d1b80a048d4787e.js"></script><script src="/_next/static/chunks/webpack-05b8c18cdbe0b397.js" defer=""></script><script src="/_next/static/chunks/framework-4556c45dd113b893.js" defer=""></script><script src="/_next/static/chunks/main-2043948c1246ba90.js" defer=""></script><script src="/_next/static/chunks/pages/_app-9538641435026bd3.js" defer=""></script><script src="/_next/static/chunks/pages/windows/practice2-cbae25f8122d6f1e.js" defer=""></script><script src="/_next/static/IieJqtKbImurzCcUpjyv7/_buildManifest.js" defer=""></script><script src="/_next/static/IieJqtKbImurzCcUpjyv7/_ssgManifest.js" defer=""></script></head><body><div id="__next"><h1>Windows: Модификация WIM-файлов</h1>
+<h2>Цели работы</h2>
+<ul>
+<li>Научиться внедрять драйверы в загрузочный образ Windows.</li>
+<li>Научиться внедрять обновления в установочный образ Windows.</li>
+<li>Получить навыки работы в командной строке Windows.</li>
+</ul>
+<h2>Работа с утилитой DISM</h2>
+<p>Windows Imaging Format (WIM) --- это формат файлов, хранящий образы дисков. Формат был разработан компанией Microsoft для
+установки релизов операционных систем семейства Windows начиная с версии Windows Vista и Windows Server 2008, которые
+используют его как часть стандартной процедуры установки.</p>
+<p>В WIM-файле может хранится несколько различных образов. Формат предусматривает эффективное сжатие данных позволяющее исключить
+дублирование одинаковых файлов из разных образов.</p>
+<p>Инсталляционные дистрибутивы содержат по два WIM-файла:</p>
+<ul>
+<li><code>boot.wim</code> --- хранит загрузочные образы, которые используются во время установки системы.</li>
+<li><code>install.wim</code> --- хранит установочные образы, которые содержат файлы предназначенные для копирования в новую систему.</li>
+</ul>
+<p>Утилита <code>dism.exe</code> это консольная программа для управления образами <code>.wim</code>. С помощью нее можно подключать (монтировать) образа из WIM-файла, добавлять в образа дополнительные пакеты, интегрировать драйверы, выполнять настройку образа и затем снова упаковывать измененный образ в <code>.wim</code>-файл. Для того чтобы она работала корректно необходимо чтобы она была запущена из командной строки с администраторскими правами доступа.</p>
+<p>Подробная документация по <code>dism.exe</code> доступна на <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism---deployment-image-servicing-and-management-technical-reference-for-windows">странице на сайте документации Microsoft</a>.</p>
+<h2>Изучение параметров командной строки</h2>
+<p>Создайте отчет о проделанной работе в виде документ Google Docs и откройте доступ для преподавателя.</p>
+<p>Законспектируйте назначение следующих ключей командной строки утилиты <code>dism</code>:</p>
+<ul>
+<li><code>dism /Online</code></li>
+<li><code>dism /Image</code></li>
+<li><code>dism /Get-WimInfo</code></li>
+<li><code>dism /Commit-Wim</code></li>
+<li><code>dism /Unmount-Wim</code></li>
+<li><code>dism /Mount-Wim</code></li>
+<li><code>dism /Get-Drivers</code></li>
+<li><code>dism /Get-DriverInfo</code></li>
+<li><code>dism /Add-Driver</code></li>
+<li><code>dism /Remove-Driver</code></li>
+<li><code>dism /Get-Features</code></li>
+<li><code>dism /Get-FeatureInfo</code></li>
+<li><code>dism /Enable-Feature</code></li>
+<li><code>dism /Disable-Feature</code></li>
+</ul>
+<h2>Внедрение драйверов и обновлений в загрузочный образ Windows (boot.wim)</h2>
+<ul>
+<li>Откройте командную строку с правами администратора.</li>
+<li>Пользуясь средствами командной строки скопируйте файл sources/boot.wim с инсталляционного диска на жесткий диск.</li>
+<li>Пользуясь средствами командной строки создайте пустой каталог на жестком диске.</li>
+<li>С помощью утилиты <code>dism</code> определите сколько образов храниться в <code>boot.wim</code>. Скопируйте использованную команду с её аргументами и результат её работы в отчет.</li>
+<li>С помощью утилиты <code>dism</code> подключите образ с индексом 2 из <code>boot.wim</code> ко вновь созданному пустому каталогу. Скопируйте использованную команду с её аргументами и результат её работы в отчет.</li>
+<li>Найдите на <a href="https://www.intel.com">сайте Intel</a> драйвер для контроллера Intel USB 3, скачайте наиболее подходящую версию и распакуйте архив с драйвером.</li>
+<li>С помощью утилиты <code>dism</code> добавьте драйвер в подключенный образ. Скопируйте использованную команду с её аргументами и результат её работы в отчет.</li>
+<li>Найдите на сайте компании Microsoft пакет обновлений KB2919442 для Windows Server 2012 R2.</li>
+<li>Отключите образ от каталога с сохранением изменений. Сравните размеры и даты измененного и оригинального файла <code>boot.wim</code>, результаты добавьте в отчет.</li>
+</ul></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/windows/practice2","query":{},"buildId":"IieJqtKbImurzCcUpjyv7","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
